@@ -1,9 +1,11 @@
 # ID-Based Signature from Pairings
 
-University Project
+*University Project*
 
 University of Luxembourg
+
 Algorithms for Numbers and Public-Key Cryptography
 
-@ Bowen lIU
-@ Jingjing XU
+Authors:
+- @Bowen LIU
+- @Jingjing XU
