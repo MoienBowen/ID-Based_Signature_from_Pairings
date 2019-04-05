@@ -1,8 +1,3 @@
-
-<script async
-  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
 # ID-Based Signature from Pairings
 
 **University Project**<br/>
@@ -40,6 +35,6 @@ Professor:
 **Key points:**
 - Understanding of elliptic curves
 - Elliptic curves addition and double addition
-- Elliptic curves over ![](http://latex.codecogs.com/gif.latex?\\\mathbb{F}_{2}) and over ![](http://latex.codecogs.com/gif.latex?\\\mathbb{F}_{2^{K}})
+- Elliptic curves over ![](http://latex.codecogs.com/gif.latex?\\mathbb{F}_{2}) and over ![](http://latex.codecogs.com/gif.latex?\\mathbb{F}_{2^{K}})
 - Bilinear parings on elliptic curves
 - Weil pairing on elliptic curves
