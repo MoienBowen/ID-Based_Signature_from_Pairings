@@ -38,3 +38,13 @@ Professor:
 - Elliptic curves over ![](http://latex.codecogs.com/gif.latex?\\mathbb{F}_{2}) and over ![](http://latex.codecogs.com/gif.latex?\\mathbb{F}_{2^{K}})
 - Bilinear parings on elliptic curves
 - Weil pairing on elliptic curves
+
+### Step 2:
+
+**Reading:**
+- Efficient Identify Based Signature Schemes Based on Pairings -by Florian Hess
+- A survey of Identify-Based Cryptography
+
+**Key points:**
+- Structure of final paper:
+ 
