@@ -32,6 +32,11 @@ Professor:
 - Visit modified [ecpy module](https://github.com/n00d1e5/ecpy.git)
 - Follow the setup, install **ecpy** package for Python 3
 
+### Note
+
+- Test user 1: [ID: admin & password: me]
+- Test user 2: [ID: tester & password: tester]
+
 ## To-Do
 
 - Report
