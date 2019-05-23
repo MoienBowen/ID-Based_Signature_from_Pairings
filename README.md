@@ -27,9 +27,13 @@ Professor:
 - ID-based signature
 - Implementation
 
+### Setup
+
+- Visit modified [ecpy module](https://github.com/n00d1e5/ecpy.git)
+- Follow the setup, install **ecpy** package for Python 3
+
 ## To-Do
 
 - Report
-- Upload modified ecpy for Python 3
 - Multi users with password
 - Storage of signiture
