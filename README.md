@@ -35,5 +35,3 @@ Professor:
 ## To-Do
 
 - Report
-- Multi users with password
-- Storage of signiture
