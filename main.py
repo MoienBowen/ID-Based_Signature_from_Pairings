@@ -1,9 +1,18 @@
 from hess import *
 import sys
 
+dict_user = {'admin': 'me'}
+
+
 if __name__ == "__main__":
-    print("Please input your ID:")
-    ID = input().strip()
+    while(True):
+        print("\nPlease input your ID:")
+        ID = input().strip()
+        if (ID not in dict_user):
+            print("\nInvalid user, please contact admin.")
+            continue
+        else:
+            break
 
     (t, Q_TA) = setup_hess(P, l)
     S_ID = extract_hess(t, ID)
@@ -19,6 +28,12 @@ if __name__ == "__main__":
             sys.exit("\nQuit")
 
         elif (option == 's'):
+            print("\nPlease input your password:")
+            pwd = input()
+            if(pwd != dict_user[ID]):
+                print("\nWrong password, please restart.")
+                continue
+
             print("\nPlease input the message:")
             msg = input()
             sig = sign_hess(msg, S_ID, sP)
