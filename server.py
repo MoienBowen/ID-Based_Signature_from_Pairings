@@ -8,7 +8,7 @@ import time
 ##########
 
 dict_user = {}  # User_name: {password, pub_key, pri_key}
-dict_msg = {}  # User_name: {msg: {signature}}
+dict_msg = {}  # User_name: {msg: {signature, hash_sig}}
 
 
 ##########
@@ -85,7 +85,7 @@ while True:
                 c.send("is_msg_in_dict_no".encode())
 
             sig = sign_hess(msg, dict_user[ID][2], sP)
-            dict_msg[ID][msg] = sig
+            dict_msg[ID][msg] = [sig]
             c.send(str(sig[0]).encode())
             time.sleep(1)
             c.send(str(sig[1]).encode())
@@ -110,7 +110,7 @@ while True:
                 c.close()
                 break
 
-            if(verify(msg, dict_msg[ID][msg], dict_user[ID][1], ID)):
+            if(verify(msg, dict_msg[ID][msg][0], dict_user[ID][1], ID)):
                 c.send("verify_yes".encode())
             else:
                 c.send("verify_no".encode())

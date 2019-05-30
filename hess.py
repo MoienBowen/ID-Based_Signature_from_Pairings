@@ -10,10 +10,10 @@ p = gmpy2.mpz("501794446334189957604282155189438160845433783392772743395579628"
               "617109929160215221425142482928909270259580854362463493326988807"
               "45359574857376419559953437557")
 
-l = (p + 1) // 6
+l = gmpy2.mpz((p + 1) // 6)
 
 F = ExtendedFiniteField(p, "x^2+x+1")
-E = EllipticCurve(F, 0, 1)
+E = EllipticCurve(F, 0, 1)  # y^2 = x^3  +1
 
 P = E(3, gmpy2.mpz("1418077311270457886139292292020587683642898636677353664354"
                    "1011717684401801069777797699258667061922178009879315047772"
@@ -39,12 +39,9 @@ def h(m, r):
 
     return pairing_to_int(E.field(hash_m * r))
 
-    # return (hash_m * r)
-
 
 def setup_hess(P, l):
     t = gmpy2.mpz(random.randint(l / 2, l))
-    t = gmpy2.mpz(t)
     Q_TA = t * P
     return (t, Q_TA)
 
