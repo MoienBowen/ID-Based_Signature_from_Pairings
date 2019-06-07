@@ -9,7 +9,7 @@ s = socket.socket()
 s.settimeout(100)
 
 # Define the port on which you want to connect
-port = 65532
+port = 65531
 
 try:
     # connect to the server on local computer

@@ -3,24 +3,19 @@ import socket
 from hess import *
 import time
 
-##########
-# User and signature database
-##########
 
+# User and signature database
 dict_user = {}  # User_name: {password, pub_key, pri_key}
 dict_msg = {}  # User_name: {msg: {signature, hash_sig}}
 
 
-##########
 # Connection
-##########
-
 # next create a socket object
 s = socket.socket()
 print ("Socket successfully created")
 
 # reserve a port on your computer in our
-port = 65532
+port = 65531
 
 # Next bind to the port
 # we have not typed any ip in the ip field
@@ -44,7 +39,6 @@ while True:
     while(True):
         option = c.recv(1024).decode()
 
-        ######################
         if (option == "Sign"):
             ID = c.recv(1024).decode()
 
@@ -84,13 +78,12 @@ while True:
             else:
                 c.send("is_msg_in_dict_no".encode())
 
-            sig = sign_hess(msg, dict_user[ID][2], sP)
+            sig = sign_hess(msg, dict_user[ID][2])
             dict_msg[ID][msg] = [sig]
             c.send(str(sig[0]).encode())
             time.sleep(1)
             c.send(str(sig[1]).encode())
 
-        ##########################
         elif (option == "Verify"):
             ID = c.recv(1024).decode()
             if (ID in dict_user):
@@ -121,11 +114,7 @@ while True:
             break
 
         else:
-            # print("\nIllegal message, disconnected.")
             break
-
-    # send a thank you message to the client.
-    # c.send("\nThank you for connecting".encode())
 
     # Close the connection with the client
     c.close()
